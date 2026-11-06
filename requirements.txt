@@ -1,0 +1,8 @@
+streamlit==1.50.0
+tensorflow
+numpy
+matplotlib
+scikit-learn
+pillow
+seaborn
+shap
