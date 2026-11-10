@@ -746,23 +746,23 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
     st.markdown("<hr/>", unsafe_allow_html=True)
-        st.markdown(
-        f"""
-        <div class="gs-sidebar-note">
-            <b>Developed by</b><br/>
-            <span style="font-size:15px; font-weight:700;">{DEVELOPER['name']}</span><br/>
-            {DEVELOPER['role']}<br/>
-            {DEVELOPER['institution']}<br/>
-            <b>Supervisor:</b> {DEVELOPER['supervisor']}
-            <div class="gs-social-row">
-                <a class="gs-social" href="{DEVELOPER['linkedin']}" target="_blank">in&nbsp; LinkedIn</a>
-                <a class="gs-social" href="{DEVELOPER['github']}" target="_blank">&lt;/&gt;&nbsp; GitHub</a>
-                <a class="gs-social" href="mailto:{DEVELOPER['email']}">\u2709&nbsp; Email</a>
-            </div>
+    st.markdown(
+    f"""
+    <div class="gs-sidebar-note">
+        <b>Developed by</b><br/>
+        <span style="font-size:15px; font-weight:700;">{DEVELOPER['name']}</span><br/>
+        {DEVELOPER['role']}<br/>
+        {DEVELOPER['institution']}<br/>
+        <b>Supervisor:</b> {DEVELOPER['supervisor']}
+        <div class="gs-social-row">
+            <a class="gs-social" href="{DEVELOPER['linkedin']}" target="_blank">in&nbsp; LinkedIn</a>
+            <a class="gs-social" href="{DEVELOPER['github']}" target="_blank">&lt;/&gt;&nbsp; GitHub</a>
+            <a class="gs-social" href="mailto:{DEVELOPER['email']}">\u2709&nbsp; Email</a>
         </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 # ----------------------------------------------------------------------------
