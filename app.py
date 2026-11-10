@@ -97,13 +97,13 @@ DEPLOYED_MODEL_KEY = "EfficientNetB0 (\u03c4=0.35) \u2014 Deployed"
 
 # ============ YOUR DETAILS: EDIT ONLY THIS BLOCK ============
 DEVELOPER = {
-    "name": "Okolo Sylvia Ifeoma",
-    "role": "AI & Biomedical Engineering Researcher",
-    "institution": "Your University Name Here",
-    "supervisor": "Dr. Your Supervisor's Name",
-    "email": "your.email@example.com",
-    "linkedin": "https://www.linkedin.com/in/your-profile",
-    "github": "https://github.com/your-username",
+    "name": "OKOLO SYLVIA IFEOMA",
+    "role": "BIOMEDICAL ENGINEER",
+    "institution": "UNIVERSITY OF NIGERIA NSUKKA",
+    "supervisor": "ENGR.DR. OCHERI.C",
+    "email": "okolosylvia96@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/okolosylvia96",
+    "github": "https://github.com/Ms-soi",
 }
 # ============================================================
 
