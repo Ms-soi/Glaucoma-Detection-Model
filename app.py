@@ -769,7 +769,7 @@ with st.sidebar:
 # PAGE 1 — SCAN IMAGE
 # ----------------------------------------------------------------------------
 def page_scan_image():
-        st.markdown(
+    st.markdown(
         """
         <div class="gs-hero">
             <p class="gs-hero-eyebrow">Real-time screening</p>
