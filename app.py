@@ -94,6 +94,17 @@ METRICS = {
 }
 
 DEPLOYED_MODEL_KEY = "EfficientNetB0 (\u03c4=0.35) \u2014 Deployed"
+# ============ YOUR DETAILS: EDIT ONLY THIS BLOCK ============
+DEVELOPER = {
+    "name": "Okolo Sylvia Ifeoma",
+    "role": "AI & Biomedical Engineering Researcher",
+    "institution": "Your University Name Here",
+    "supervisor": "Engr.Dr. Ocheri.C",
+    "email": "okolosylvia96@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/okolosylvia96",
+    "github": "https://github.com/Ms-soi",
+}
+# ============================================================
 
 KEY_FINDINGS = [
     "EfficientNetB0's frozen, ImageNet-pretrained backbone converges to a "
@@ -344,16 +355,146 @@ section[data-testid="stSidebar"] hr {
     color: white;
 }
 
-/* Fix: force dark text for plain content, leaving sidebar and .gs-* components untouched */
-section[data-testid="stMain"] p:not([class*="gs-"]),
-section[data-testid="stMain"] li:not([class*="gs-"]),
-section[data-testid="stMain"] span:not([class*="gs-"]),
-section[data-testid="stMain"] label:not([class*="gs-"]),
+/* Fix: readable dark text everywhere in the main area */
+[data-testid="stMain"] h1,
+[data-testid="stMain"] h2,
+[data-testid="stMain"] h3,
+[data-testid="stMain"] h4,
+[data-testid="stMain"] h5,
+[data-testid="stMain"] p:not([class*="gs-"]),
+[data-testid="stMain"] li:not([class*="gs-"]),
+[data-testid="stMain"] span:not([class*="gs-"]),
+[data-testid="stMain"] label:not([class*="gs-"]),
 div[data-testid="stExpander"] p:not([class*="gs-"]),
 div[data-testid="stExpander"] li:not([class*="gs-"]),
 div[data-testid="stExpander"] span:not([class*="gs-"]) {
     color: #1D2B27 !important;
 }
+
+/* Keep button text white on the blue buttons */
+[data-testid="stMain"] .stButton > button,
+[data-testid="stMain"] .stButton > button p,
+[data-testid="stMain"] .stButton > button span {
+    color: #FFFFFF !important;
+}
+/* ================= STEP 3: MEDICAL BLUE & WHITE REDESIGN ================= */
+
+/* Soft blue-white background with a faint dotted pattern */
+.stApp {
+    background:
+        radial-gradient(circle at 10% 6%, #D9E9FB 0, transparent 36%),
+        radial-gradient(circle at 92% 14%, #E3EFFE 0, transparent 34%),
+        radial-gradient(circle at 50% 104%, #E8F2FF 0, transparent 42%),
+        radial-gradient(#C9DDF5 1px, transparent 1.2px),
+        linear-gradient(180deg, #F6FAFF 0%, #FFFFFF 100%);
+    background-size: auto, auto, auto, 28px 28px, auto;
+    background-attachment: fixed;
+}
+[data-testid="stHeader"] { background: transparent; }
+
+/* Hero banner */
+.gs-hero {
+    background: linear-gradient(120deg, #0A2647 0%, #144272 50%, #2C74B3 100%);
+    border-radius: 20px;
+    padding: 30px 34px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 30px rgba(20, 66, 114, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+.gs-hero::after {
+    content: "\1F441";
+    position: absolute; right: 26px; top: -6px;
+    font-size: 120px; opacity: 0.12;
+}
+.gs-hero-eyebrow {
+    color: #A9CDF2; font-size: 12.5px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px 0;
+}
+.gs-hero-title {
+    color: #FFFFFF; font-family: 'Poppins', sans-serif;
+    font-size: 32px; font-weight: 700; margin: 0 0 6px 0;
+}
+.gs-hero-sub {
+    color: #D6E8FB; font-size: 15px; line-height: 1.55; margin: 0; max-width: 640px;
+}
+
+/* Cards: softer, lift on hover */
+.gs-card, .gs-metric-card, .gs-history-row {
+    border-radius: 18px;
+    border: 1px solid #DCE8F6;
+    box-shadow: 0 4px 18px rgba(32, 82, 149, 0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.gs-card:hover, .gs-metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(32, 82, 149, 0.16);
+}
+
+/* Headings in medical blue */
+[data-testid="stMain"] h1, [data-testid="stMain"] h2,
+[data-testid="stMain"] h3, [data-testid="stMain"] h4 {
+    color: #0A2647 !important;
+}
+
+/* Buttons: rounded, glowing */
+.stButton > button {
+    border-radius: 999px;
+    padding: 0.65em 1.8em;
+    box-shadow: 0 6px 16px rgba(32, 82, 149, 0.30);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(32, 82, 149, 0.40);
+}
+
+/* File uploader: dashed drop-zone look */
+[data-testid="stFileUploader"] section {
+    background: #F4F9FF;
+    border: 2px dashed #7FB0E6;
+    border-radius: 16px;
+}
+[data-testid="stFileUploader"] section:hover { background: #EAF3FF; }
+
+/* Expanders and tables */
+div[data-testid="stExpander"] {
+    background: #FFFFFF;
+    border: 1px solid #DCE8F6 !important;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(32, 82, 149, 0.06);
+}
+[data-testid="stDataFrame"] {
+    border-radius: 14px; overflow: hidden; border: 1px solid #DCE8F6;
+}
+
+/* Sidebar navigation: pill-style items */
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] > label {
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    transition: background .2s ease;
+}
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] > label:hover {
+    background: rgba(255,255,255,0.18);
+}
+/* ===== STEP 4: social links & footer ===== */
+.gs-social-row { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.gs-social {
+    display: inline-block; padding: 6px 12px; border-radius: 999px;
+    background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28);
+    font-size: 12px; font-weight: 600; text-decoration: none !important;
+}
+.gs-social:hover { background: rgba(255,255,255,0.28); }
+.gs-footer {
+    margin-top: 40px; padding: 26px 20px; text-align: center;
+    background: linear-gradient(120deg, #0A2647, #205295);
+    border-radius: 18px;
+}
+.gs-footer-title { color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 700; margin: 0; }
+.gs-footer-sub { color: #B9D3EE; font-size: 13px; margin: 2px 0 14px 0; }
+.gs-social-dark { color: #FFFFFF !important; margin: 0 4px; }
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
@@ -605,14 +746,19 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
     st.markdown("<hr/>", unsafe_allow_html=True)
-    st.markdown(
-        """
+        st.markdown(
+        f"""
         <div class="gs-sidebar-note">
-            <b>Developed by:</b> Okolo Sylvia Ifeoma<br/>
-            <b>Institution:</b> Your University Name Here<br/>
-            <b>Supervisor:</b> Dr. Your Supervisor's Name<br/>
-            <b>Contact:</b> your.email@example.com<br/>
-            <b>GitHub:</b> github.com/your-username
+            <b>Developed by</b><br/>
+            <span style="font-size:15px; font-weight:700;">{DEVELOPER['name']}</span><br/>
+            {DEVELOPER['role']}<br/>
+            {DEVELOPER['institution']}<br/>
+            <b>Supervisor:</b> {DEVELOPER['supervisor']}
+            <div class="gs-social-row">
+                <a class="gs-social" href="{DEVELOPER['linkedin']}" target="_blank">in&nbsp; LinkedIn</a>
+                <a class="gs-social" href="{DEVELOPER['github']}" target="_blank">&lt;/&gt;&nbsp; GitHub</a>
+                <a class="gs-social" href="mailto:{DEVELOPER['email']}">\u2709&nbsp; Email</a>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -623,8 +769,18 @@ with st.sidebar:
 # PAGE 1 — SCAN IMAGE
 # ----------------------------------------------------------------------------
 def page_scan_image():
-    st.markdown('<p class="gs-eyebrow">Real-time screening</p>', unsafe_allow_html=True)
-    st.markdown("## Scan a Fundus Image")
+        st.markdown(
+        """
+        <div class="gs-hero">
+            <p class="gs-hero-eyebrow">Real-time screening</p>
+            <p class="gs-hero-title">\U0001F441\uFE0F GlaucoScan AI</p>
+            <p class="gs-hero-sub">Upload a retinal fundus photograph and let deep
+            learning screen it for early signs of glaucoma, with visual
+            explanations of how the decision was made.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     st.write(
         "Upload a retinal fundus photograph to screen for visual patterns "
         "associated with glaucoma. The model returns a probability score and "
@@ -644,8 +800,35 @@ def page_scan_image():
         "Upload a fundus image (JPG or PNG)", type=["jpg", "jpeg", "png"]
     )
 
-    if uploaded_file is not None:
+        if uploaded_file is not None:
         pil_image = Image.open(uploaded_file)
+
+        # Unique ID for this upload, so a NEW image asks for a NEW click
+        file_id = f"{uploaded_file.name}_{uploaded_file.size}"
+        already_analysed = st.session_state.get("analysed_file_id") == file_id
+
+        # ---- Not analysed yet: show preview + Run button, then stop ----
+        if not already_analysed:
+            col_prev, col_btn = st.columns([1, 1.2], gap="large")
+            with col_prev:
+                st.markdown('<div class="gs-card">', unsafe_allow_html=True)
+                st.image(pil_image, caption=uploaded_file.name, width="stretch")
+                st.markdown("</div>", unsafe_allow_html=True)
+            with col_btn:
+                st.markdown("### Ready to analyse")
+                st.write(
+                    "Your image has been uploaded. Check the preview, then "
+                    "click the button below to run the screening."
+                )
+                if st.button("\U0001F50D  Run Analysis", key="run_analysis"):
+                    with st.spinner("Analysing image..."):
+                        st.session_state["analysis_prob"] = run_prediction(model, pil_image)
+                    st.session_state["analysed_file_id"] = file_id
+                    st.rerun()
+            return  # nothing below runs until the button is clicked
+
+        # ---- Analysed: use the stored result ----
+        probability = st.session_state["analysis_prob"]
 
         col_img, col_result = st.columns([1, 1.2], gap="large")
 
@@ -653,9 +836,6 @@ def page_scan_image():
             st.markdown('<div class="gs-card">', unsafe_allow_html=True)
             st.image(pil_image, caption=uploaded_file.name, width="stretch")
             st.markdown("</div>", unsafe_allow_html=True)
-
-        with st.spinner("Analysing image..."):
-            probability = run_prediction(model, pil_image)
 
         is_glaucoma = probability >= DECISION_THRESHOLD
         normal_pct = (1 - probability) * 100
@@ -1079,6 +1259,19 @@ def page_scan_history():
 # ----------------------------------------------------------------------------
 # ROUTER
 # ----------------------------------------------------------------------------
+def render_footer():
+    st.markdown(
+        f"""
+        <div class="gs-footer">
+            <p class="gs-footer-title">Built by {DEVELOPER['name']}</p>
+            <p class="gs-footer-sub">{DEVELOPER['role']} \u00b7 {DEVELOPER['institution']}</p>
+            <a class="gs-social gs-social-dark" href="{DEVELOPER['linkedin']}" target="_blank">LinkedIn</a>
+            <a class="gs-social gs-social-dark" href="{DEVELOPER['github']}" target="_blank">GitHub</a>
+            <a class="gs-social gs-social-dark" href="mailto:{DEVELOPER['email']}">Email</a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 if page.endswith("Scan Image"):
     page_scan_image()
 elif page.endswith("Model Performance"):
@@ -1087,3 +1280,4 @@ elif page.endswith("About Glaucoma"):
     page_about_glaucoma()
 elif page.endswith("Scan History"):
     page_scan_history()
+render_footer()
